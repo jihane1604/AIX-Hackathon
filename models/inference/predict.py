@@ -49,3 +49,10 @@ class InferencePipeline:
             "risk": risk,
             "retrieved": hits
         }
+    
+    def set_regulator(self, regulator_ns: str):
+        """Allows updating the search context without reloading heavy classifiers."""
+        if self.searcher.regulator_ns != regulator_ns:
+            self.searcher = RegulatorSearcher(regulator_ns) 
+            # Note: This requires RegulatorSearcher to handle efficient index switching.
+            self.searcher.regulator_ns = regulator_ns # Assuming RegulatorSearcher doesn't have a built-in property for this

@@ -1,8 +1,32 @@
 name: aix-hackathon-env
 channels:
+  # Add the required channels for PyTorch, Transformers, etc.
+  - pytorch
+  - conda-forge 
   - defaults
 dependencies:
+  # Core Python
   - python=3.9
-  - pandas=1.5.3
-  - scikit-learn=1.2.2
-  - joblib=1.2.0
+  # Standard Data Science
+  - pandas
+  - scikit-learn
+  - joblib
+  - numpy
+  # Deep Learning (often better to get from conda channels)
+  - pytorch=2.3.1
+  # Vector Search
+  - faiss-cpu=1.8.0
+  # Pip dependencies (for libraries not available on Conda or specific versions)
+  - pip
+  - pip:
+    - -r requirements.txt
+    # OR list the specific packages here:
+    # - transformers==4.44.2
+    # - datasets==2.20.0
+    # - sentence-transformers==3.0.1
+    # - fastapi==0.110
+    # - uvicorn==0.30
+    # - pymupdf==1.24.10
+    # - python-docx==1.1.2
+    # - pyyaml==6.0
+    # - peft==0.11.1
