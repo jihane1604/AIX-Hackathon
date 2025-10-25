@@ -1,6 +1,6 @@
 # environment.yml
 resources/
-src/app/schemas_regulatory.py
-src/app/registry.py
-src/server.py
-web/
+# src/app/schemas_regulatory.py
+# src/app/registry.py
+# src/server.py
+# web/
