@@ -1,0 +1,6 @@
+# Rule-pack placeholder for QFCRA. Extend later identical to QCB format.
+id: qfc
+jurisdiction: "Qatar"
+name: "Qatar Financial Centre Regulatory Authority"
+domains: []
+articles: []

@@ -1,0 +1,111 @@
+[
+  {
+    "doc_id": "922ea488",
+    "path": "data\\raw\\1. Regulatory Framework.docx",
+    "doc_type": "regulator_rule",
+    "regulator_ns": "qcb",
+    "language": null,
+    "metadata": {
+      "original_name": "1. Regulatory Framework.docx"
+    },
+    "doc_type_refined": "regulator_rule",
+    "facts": {}
+  },
+  {
+    "doc_id": "34147ca7",
+    "path": "data\\raw\\2. Mock Startup Business Plan (Input Document).docx",
+    "doc_type": "startup_plan",
+    "regulator_ns": null,
+    "language": null,
+    "metadata": {
+      "original_name": "2. Mock Startup Business Plan (Input Document).docx"
+    },
+    "doc_type_refined": "policy",
+    "facts": {
+      "data_location_mention": "hosted entirely on a globally distributed Amazon Web Services (AWS) cloud infrastructure, utilizing server resources in Ireland",
+      "mentions_compliance_officer": true,
+      "improper_role_assignment": false,
+      "activities": [
+        "p2p_lending",
+        "payments",
+        "wallet",
+        "cross_border"
+      ]
+    }
+  },
+  {
+    "doc_id": "0454e2e0",
+    "path": "data\\raw\\3. Resource Mapping Data.docx",
+    "doc_type": "resources",
+    "regulator_ns": "qcb",
+    "language": null,
+    "metadata": {
+      "original_name": "3. Resource Mapping Data.docx"
+    },
+    "doc_type_refined": "regulator_rule",
+    "facts": {}
+  },
+  {
+    "doc_id": "ee8383cb",
+    "path": "data\\raw\\4. Mock Startup Internal Compliance Policy.docx",
+    "doc_type": "policy",
+    "regulator_ns": null,
+    "language": null,
+    "metadata": {
+      "original_name": "4. Mock Startup Internal Compliance Policy.docx"
+    },
+    "doc_type_refined": "policy",
+    "facts": {
+      "data_location_mention": "stored within our secure cloud environment, hosted across the AWS regions in Ireland",
+      "mentions_compliance_officer": false,
+      "improper_role_assignment": false,
+      "activities": [
+        "p2p_lending",
+        "payments"
+      ]
+    }
+  },
+  {
+    "doc_id": "cc1d293a",
+    "path": "data\\raw\\5. Mock Regulatory Circular- Licensing Pathways.docx",
+    "doc_type": "regulator_rule",
+    "regulator_ns": "qcb",
+    "language": null,
+    "metadata": {
+      "original_name": "5. Mock Regulatory Circular- Licensing Pathways.docx"
+    },
+    "doc_type_refined": "regulator_rule",
+    "facts": {}
+  },
+  {
+    "doc_id": "e6af1958",
+    "path": "data\\raw\\6. Mock Startup Legal Structure Document.docx",
+    "doc_type": "legal",
+    "regulator_ns": null,
+    "language": null,
+    "metadata": {
+      "original_name": "6. Mock Startup Legal Structure Document.docx"
+    },
+    "doc_type_refined": "legal",
+    "facts": {
+      "mentions_compliance_officer": false,
+      "improper_role_assignment": false,
+      "activities": [
+        "p2p_lending",
+        "payments"
+      ]
+    }
+  },
+  {
+    "doc_id": "b2ab7aef",
+    "path": "data\\raw\\Overview and Guidelines.docx",
+    "doc_type": "other",
+    "regulator_ns": null,
+    "language": null,
+    "metadata": {
+      "original_name": "Overview and Guidelines.docx"
+    },
+    "doc_type_refined": "other",
+    "facts": {}
+  }
+]

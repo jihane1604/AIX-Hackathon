@@ -1,0 +1,66 @@
+id: qcb
+jurisdiction: ''
+name: QCB
+domains:
+- id: aml_kyc
+  name: Aml Kyc
+- id: data_residency
+  name: Data Residency
+- id: governance
+  name: Governance
+- id: licensing_capital
+  name: Licensing Capital
+articles:
+- article_id: '1.1'
+  title: Category Definition
+  text: "1.1.1. Category 1 (Payment Service Provider - PSP): Applies to entities providing\
+    \ domestic or cross-border payment processing or electronic money issuance. \n\
+    1.1.2. Category 2 (Marketplace Lending - P2P/Crowdfunding): Applies to platforms\
+    \ facilitating direct lending or capital raising between investors and businesses/consumers.\
+    \ \n1.1.3. Category 3 (Digital Wealth Management): Applies to entities offering\
+    \ automated investment advice (Robo-advisory) or portfolio management."
+  domain: null
+  confidence: 0.322
+- article_id: '1.2'
+  title: Minimum Capital Requirements
+  text: "1.2.1. PSP (Category 1): Minimum regulatory capital of QAR 5,000,000 must\
+    \ be maintained at all times. \n1.2.2. Marketplace Lending (Category 2): Minimum\
+    \ regulatory capital of QAR 7,500,000 must be maintained at all times. \n1.2.3.\
+    \ Digital Wealth Management (Category 3): Minimum regulatory capital of QAR 4,000,000\
+    \ must be maintained at all times.\nSECTION 2: APPLICATION & GOVERNANCE SUBMISSIONS"
+  domain: licensing_capital
+  confidence: 0.528
+- article_id: '2.1'
+  title: Key Personnel Documents
+  text: "2.1.1. Fit and Proper: CVs, organizational charts, and police clearance certificates\
+    \ must be submitted for all Board Members, the CEO, and the designated Compliance\
+    \ Officer. \n2.1.2. Documentation of Structure: The final, signed Articles of\
+    \ Association (AoA) must be submitted before the Conditional License is issued."
+  domain: governance
+  confidence: 0.507
+- article_id: '2.2'
+  title: Corporate Governance and Audit
+  text: '2.2.1. Compliance Officer: The entity must appoint a designated, independent
+    Compliance Officer whose CV and credentials must be submitted to the QCB for approval
+    prior to licensing. 2.2.2. Annual Audit: An annual external audit of all technology
+    systems and compliance policies is mandatory.'
+  domain: governance
+  confidence: 0.598
+- article_id: F1
+  title: Fragment 1
+  text: "{\n  \"qdb_programs\": [\n    {\n      \"program_id\": \"QDB_INCUBATOR_001\"\
+    ,\n      \"program_name\": \"Fintech Regulatory Accelerator\",\n      \"focus_areas\"\
+    : [\"Licensing Strategy\", \"Corporate Structure\", \"QCB Engagement\"],\n   \
+    \   \"eligibility\": \"Pre-license stage startups\"\n    },\n    {\n      \"program_id\"\
+    : \"QDB_EXPERT_002\",\n      \"program_name\": \"AML Compliance Workshop Series\"\
+    ,\n      \"focus_areas\": [\"AML Policy Drafting\", \"Transaction Monitoring\"\
+    , \"FATF Compliance\"],\n      \"eligibility\": \"Startups with high-risk profile\"\
+    \n    }\n  ],\n  \"compliance_experts\": [\n    {\n      \"expert_id\": \"EXPERT_C101\"\
+    ,\n      \"name\": \"Dr. Aisha Al-Mansoori\",\n      \"specialization\": \"Data\
+    \ Residency and Cloud Compliance (QCB Article 2.1)\",\n      \"contact\": \"a.mansoori@compliancefirm.qa\"\
+    \n    },\n    {\n      \"expert_id\": \"EXPERT_C102\",\n      \"name\": \"Mr.\
+    \ Karim Hassan\",\n      \"specialization\": \"AML/CFT Policy Drafting and Training\
+    \ (QCB Article 1.1.4)\",\n      \"contact\": \"k.hassan@amlconsulting.qa\"\n \
+    \   }\n  ]\n}"
+  domain: null
+  confidence: 0.315

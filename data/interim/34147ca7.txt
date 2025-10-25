@@ -1,0 +1,15 @@
+Project Al-Ameen: Peer-to-Peer Investment Platform
+Date: 2025-10-20 Company Name: Al-Ameen Digital, LLC
+Executive Summary
+Al-Ameen Digital is launching a mobile-first Peer-to-Peer (P2P) investment platform targeting the SME and consumer market in Qatar. Our platform connects investors directly with borrowers, offering personalized loan terms and reducing reliance on traditional bank lending. We project originating QAR 50 million in loans in the first 12 months. Our core technology uses smart contracts for automated loan servicing.
+1. Proposed Activities and Service Model
+Our primary activities are:
+P2P Loan Origination and Servicing: Facilitating debt contracts between users. Maximum individual transaction value for a loan is capped at QAR 200,000.
+Cross-Border Remittances: We offer an optional service for international investors to remit funds into Qatari accounts, leveraging a partnership with a third-party global payment processor, 'SwiftPay Global'. This service involves transferring funds up to QAR 45,000 per transaction.
+Digital Wallet: A proprietary, non-interest-bearing digital wallet where users hold funds before deployment or after repayment.
+2. Corporate and Operational Structure
+The company is structured as a Limited Liability Company (LLC) registered in Qatar. Our management team includes a CEO, CTO, and Head of Finance. Our current focus is on technology development and marketing. We plan to hire a dedicated data scientist next quarter.
+3. Technology and Data Storage
+Our platform is hosted entirely on a globally distributed Amazon Web Services (AWS) cloud infrastructure, utilizing server resources in Ireland and Singapore for maximum resilience and disaster recovery. We utilize industry-standard 256-bit encryption for all data transit and storage. We will obtain customer consent for using their data to improve our proprietary credit scoring algorithm.
+4. Current Compliance and Governance Plan
+We have drafted a Data Privacy Policy and a basic KYC Procedure which involves capturing a national ID card via the app. For all users, we require a utility bill as proof of address. We do not currently have a dedicated Compliance Officer but plan to assign these duties to the Head of Finance until we secure Series A funding. Our policy for reporting suspicious transactions is currently under review by our external legal counsel.

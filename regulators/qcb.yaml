@@ -1,0 +1,14 @@
+# Rule-pack placeholder for QCB. Articles remain empty for Step 1.
+id: qcb
+jurisdiction: "Qatar"
+name: "Qatar Central Bank"
+domains:
+  - id: "aml_kyc"
+    name: "AML/KYC"
+  - id: "data_residency"
+    name: "Data Protection & Residency"
+  - id: "governance"
+    name: "Corporate Governance & Audit"
+  - id: "licensing_capital"
+    name: "Licensing & Capital"
+articles: [] 
