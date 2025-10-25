@@ -1,0 +1,105 @@
+# Scoring + risk mapping configuration (human-editable, no code changes needed).
+# This file is read at inference time to turn model outputs (retrieval + risk logits)
+# into a single readiness score, ranked gaps, and final risk label.
+
+# ------------------------------------------------------------------------------------
+# DOMAIN WEIGHTS
+# ------------------------------------------------------------------------------------
+# Two modes:
+#  1) static: you list domains and their weights explicitly (works with known schemas)
+#  2) dynamic: when domains are induced from text (unsupervised), weights are auto-
+#     generated if a domain isn’t present here (fallback_weight, min/max clamps).
+#
+# Notes:
+# - Weight = importance multiplier for a domain’s violations/gaps.
+# - critical: if true, any severe violation in this domain can cap readiness.
+# - If you use dynamic domains only, you can leave "domains:" empty and rely on
+#   fallback weighting below.
+domains:
+  licensing_capital:
+    weight: 5.0
+    critical: true
+  governance:
+    weight: 3.0
+    critical: false
+  aml_kyc:
+    weight: 4.0
+    critical: true
+  data_residency:
+    weight: 3.5
+    critical: true
+
+# Fallback weights for domains not listed above (e.g., dynamically induced clusters).
+dynamic_domains:
+  enabled: true               # if true, unknown domains get an auto-weight
+  fallback_weight: 2.5        # base weight for new/induced domains
+  min_weight: 1.0             # clamp low
+  max_weight: 6.0             # clamp high
+  size_bias: 0.25             # optional small boost for large clusters (0..1)
+
+# ------------------------------------------------------------------------------------
+# RISK LABELING
+# ------------------------------------------------------------------------------------
+# Convert model risk probabilities/scores into human labels, or use score percentiles.
+# You can choose one of:
+#   scheme: "thresholds"  → fixed cutoffs
+#   scheme: "quantiles"   → compute on validation set; persists cut points to disk
+risk_labeling:
+  scheme: thresholds
+  thresholds:
+    high:   0.70
+    medium: 0.45
+    low:    0.25
+  # If you switch to quantiles, the training/validation pipeline will compute:
+  # quantiles:
+  #   high: 0.80
+  #   medium: 0.50
+  #   low: 0.20
+
+# ------------------------------------------------------------------------------------
+# READINESS SCORE (0..100)
+# ------------------------------------------------------------------------------------
+# Gap score aggregates domain-weighted deficits, then readiness = 100 - normalized_gap.
+# Normalization is performed against a reference range (empirical from val set or fixed).
+readiness:
+  normalize:
+    mode: "fixed"             # "fixed" | "empirical"
+    fixed_max_gap: 100.0      # if mode=fixed, any gap >= this maps to readiness ~0
+  # Optional safety cap: any critical breach (e.g., capital shortfall) can enforce a max.
+  caps:
+    critical_breach_max_readiness: 40.0
+
+# ------------------------------------------------------------------------------------
+# GAP PRIORITIZATION
+# ------------------------------------------------------------------------------------
+# How to rank and present the top-N gaps back to the user.
+gaps:
+  top_n: 10
+  sort_by: "impact"           # "impact" | "confidence" | "weight"
+  include_evidence: true      # attach short evidence spans when available
+  evidence_chars: 240
+
+# ------------------------------------------------------------------------------------
+# EXPLANATION TEMPLATES
+# ------------------------------------------------------------------------------------
+# Lightweight templates for user-facing text. If you later use a small LLM to rewrite
+# explanations, keep these as fallbacks.
+templates:
+  gap_item: |
+    Domain: {domain_name}
+    Article: {article_id} — {title}
+    Impact: {impact} / Weight: {weight}
+    Why it matters: {why}
+    How to fix: {fix}
+  summary: |
+    Overall readiness: {readiness}% ({risk_label})
+    Critical issues: {critical_count} | Total gaps: {total_gaps}
+    Next steps: {next_steps}
+
+# ------------------------------------------------------------------------------------
+# AUDIT / LOGGING
+# ------------------------------------------------------------------------------------
+# Persist detailed scoring intermediates for traceability.
+audit:
+  save_intermediates: true
+  path: "./reports/audit"     # the app creates subfolders per run/date

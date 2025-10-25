@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "description": "Startup document classification dataset schema for AIX-Hackathon",
+  "fields": {
+    "doc_id": "str",
+    "regulator_ns": "str",
+    "path": "str",
+    "text": "str",
+    "targets": {
+      "doc_type": "enum",
+      "risk": "enum"
+    }
+  }
+}

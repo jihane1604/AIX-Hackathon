@@ -1,6 +1,52 @@
-# environment.yml
+# -----------------------------
+# PYTHON / ENVIRONMENT
+# -----------------------------
+__pycache__/
+*.pyc
+.venv/
+.env
+*.egg-info/
+.cache/
+*.log
+
+# -----------------------------
+# CONFIG / TEMP / RESOURCES
+# -----------------------------
 resources/
-# src/app/schemas_regulatory.py
-# src/app/registry.py
-# src/server.py
-# web/
+# environment.yml
+
+# -----------------------------
+# RAW AND LARGE DATA
+# -----------------------------
+# Ignore heavy source documents and runtime intermediates
+data/regulatory_corpus/**/*.{pdf,PDF,docx,DOCX,doc,DOC,txt,TXT}
+data/interim/*
+data/processed/*
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+!data/processed/chunks/.gitkeep
+
+# Keep Arrow datasets metadata but skip large shards
+data/datasets/*/*.arrow
+data/datasets/*/dataset_info.json
+data/datasets/*/state.json
+data/datasets/*/dataset_dict.json
+data/datasets/train/
+data/datasets/test/
+data/datasets/val/
+!data/datasets/artifacts/
+!data/datasets/README.md
+!data/datasets/artifacts/id2label.json
+!data/datasets/artifacts/schema.json
+
+# -----------------------------
+# SYSTEM / IDE FILES
+# -----------------------------
+.vscode/
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# LEGACY
+# -----------------------------
+old structure/

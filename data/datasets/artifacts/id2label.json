@@ -1,0 +1,13 @@
+{
+  "doc_type": [
+    "business_plan",
+    "policy",
+    "legal",
+    "other"
+  ],
+  "risk": [
+    "low",
+    "medium",
+    "high"
+  ]
+}
