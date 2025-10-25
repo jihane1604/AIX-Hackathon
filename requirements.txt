@@ -21,3 +21,4 @@ uvicorn>=0.30
 
 # Optional (only if you use adapters/LoRA in models/adapters/)
 peft>=0.11.1
+supabase-py
