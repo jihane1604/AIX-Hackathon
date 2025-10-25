@@ -46,7 +46,7 @@ def main():
     index.add(emb)
 
     out_dir = ROOT_DIR / "indices" / ns
-    out_dir.mkdir(parents=True, exist_ok=True)
+    # out_dir.mkdir(parents=True, exist_ok=True)
     faiss.write_index(index, str(out_dir / "articles.index"))
 
     # store id mapping

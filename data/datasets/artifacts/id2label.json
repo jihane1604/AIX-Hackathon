@@ -2,8 +2,7 @@
   "doc_type": [
     "business_plan",
     "policy",
-    "legal",
-    "other"
+    "legal"
   ],
   "risk": [
     "low",

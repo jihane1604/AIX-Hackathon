@@ -16,9 +16,9 @@ MODEL_OUT_DIR = ROOT_DIR / "models" / "artifacts"
 LOG_DIR = ROOT_DIR / "models" / "logs"
 REPORTS_DIR = ROOT_DIR / "reports"
 
-MODEL_OUT_DIR.mkdir(parents=True, exist_ok=True)
-LOG_DIR.mkdir(parents=True, exist_ok=True)
-REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+# MODEL_OUT_DIR.mkdir(parents=True, exist_ok=True)
+# LOG_DIR.mkdir(parents=True, exist_ok=True)
+# REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
 # Labels (doc_type, risk) – loaded from artifacts
 with open(ARTIFACTS_DIR / "id2label.json", "r", encoding="utf-8") as f:

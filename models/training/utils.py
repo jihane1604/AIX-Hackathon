@@ -18,9 +18,9 @@ def seed_everything(seed: int = 42):
 
 def build_training_args(name: str) -> TrainingArguments:
     out_dir = (MODEL_OUT_DIR / name)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    # out_dir.mkdir(parents=True, exist_ok=True)
     log_dir = (LOG_DIR / name)
-    log_dir.mkdir(parents=True, exist_ok=True)
+    # log_dir.mkdir(parents=True, exist_ok=True)
 
     return TrainingArguments(
         output_dir=str(out_dir),
