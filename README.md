@@ -24,6 +24,8 @@ Outputs:
 - But right now it cant automatically add regulators to the folder which i think will cause a problem later, theres some gpt code for getting a user post with the information on the regulator (name, jursidiction, domains) then it automatically makes it but its not working, someone (mr software engineer) should look at it pls -- command to run `uvicorn src.server:app --reload --host 0.0.0.0 --port 8000`
 
 # Step 2 enrichment and rulepack generation.
+- Modules in step a: aliases.py, chunker.py, enrich.py, rulepack_from_docs.py, step2_enrich_and_build_rulepacks.py
 - Uncomment line 92 in `model_rulepack.py` for gpu (does not take too long on cpu but just in case)
 - Updates the manifest to add more info to each doc provided 
 - For step 2b i need someone (mr business man) to give me the full list of domains
+- Modules in step b: model_rulepack.py, rulepack_merge.py, step2b_generate_rulepacks_model.py
